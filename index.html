@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KUROMAKU — Cairo 2127</title>
+<title>DATA TRADER — Cairo 2127</title>
+<link rel="icon" type="image/x-icon" href="logo kinetic sparks.ico">
+<link rel="apple-touch-icon" href="logo kinetic sparks.ico">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ═══════════════════════════════════════════
@@ -22,7 +24,7 @@
   --cb:rgba(121,235,255,0.5);
   --gb:rgba(200,169,110,0.35);
   --text:#E2EEF5;
-  --mute:rgba(200,224,235,0.42);
+  --mute:rgba(226,238,245,0.72);
   --border:rgba(121,235,255,0.12);
   --gborder:rgba(200,169,110,0.2);
 
@@ -262,7 +264,7 @@ nav.scrolled{background:rgba(2,8,16,0.92)}
 @keyframes shimmer{to{background-position:250% center}}
 /* red + cyan glitch doubles */
 .hero-title::before{
-  content:'KUROMAKU';
+  content:'DATA TRADER';
   position:absolute;top:0;left:0;right:0;
   font-family:'Bebas Neue',sans-serif;font-size:inherit;letter-spacing:inherit;line-height:inherit;
   -webkit-text-fill-color:transparent;
@@ -271,7 +273,7 @@ nav.scrolled{background:rgba(2,8,16,0.92)}
   animation:glitchR 10s 2.5s infinite;
 }
 .hero-title::after{
-  content:'KUROMAKU';
+  content:'DATA TRADER';
   position:absolute;top:0;left:0;right:0;
   font-family:'Bebas Neue',sans-serif;font-size:inherit;letter-spacing:inherit;line-height:inherit;
   -webkit-text-fill-color:transparent;
@@ -505,7 +507,7 @@ section{position:relative;z-index:3;padding:clamp(72px,10vw,120px) clamp(20px,6v
 .gallery-main:hover img{transform:scale(1.025);filter:saturate(1.1) brightness(1.05)}
 .gallery-main-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(2,8,16,0.9) 0%,transparent 45%);display:flex;align-items:flex-end;padding:clamp(16px,3vw,26px);pointer-events:none}
 .gallery-label{font-family:'Share Tech Mono',monospace;font-size:clamp(9px,1.5vw,11px);letter-spacing:2px;color:var(--c)}
-.gallery-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:960px;margin:0 auto}
+.gallery-thumbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;max-width:960px;margin:0 auto}
 .gthumb{overflow:hidden;border:1px solid rgba(121,235,255,0.1);cursor:pointer;transition:border-color .3s,box-shadow .3s}
 .gthumb.active,.gthumb:hover{border-color:rgba(121,235,255,0.45);box-shadow:0 0 14px rgba(121,235,255,0.1)}
 .gthumb img{width:100%;display:block;opacity:.4;transition:opacity .35s,transform .4s;filter:saturate(.8)}
@@ -537,7 +539,8 @@ section{position:relative;z-index:3;padding:clamp(72px,10vw,120px) clamp(20px,6v
    TEAM
 ═══════════════════════════════════════════ */
 #team{background:var(--ink)}
-.team-members{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:2px}
+.team-members{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:2px}
+@media(max-width:1100px){.team-members{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:820px){.team-members{grid-template-columns:1fr}}
 .tmember{
   padding:clamp(28px,4vw,44px) clamp(22px,3vw,32px);
@@ -590,43 +593,19 @@ section{position:relative;z-index:3;padding:clamp(72px,10vw,120px) clamp(20px,6v
 .sbtn{
   font-family:'Share Tech Mono',monospace;font-size:clamp(8px,1.2vw,10px);letter-spacing:2px;
   padding:8px clamp(12px,2vw,18px);
-  border:1px solid rgba(121,235,255,0.18);color:var(--mute);
+  border:1px solid rgba(121,235,255,0.22);color:rgba(226,238,245,0.9);
   text-decoration:none;
   clip-path:polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px);
   transition:all .25s;white-space:nowrap;
 }
 .sbtn:hover{border-color:var(--c);color:var(--c);background:rgba(121,235,255,0.06)}
 
-/* ═══════════════════════════════════════════
-   SUPPORT / PATREON
-═══════════════════════════════════════════ */
-#support{background:var(--ink2)}
-.support-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,72px);align-items:start}
-@media(max-width:820px){.support-grid{grid-template-columns:1fr}}
-.tiers{display:flex;flex-direction:column;gap:10px}
-.tier{
-  border:1px solid rgba(121,235,255,0.1);
-  padding:clamp(16px,2.5vw,20px) clamp(18px,3vw,26px);
-  display:flex;align-items:center;justify-content:space-between;gap:16px;
-  background:rgba(121,235,255,0.02);
-  clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);
-  transition:border-color .3s,background .3s,transform .3s;cursor:pointer;
+.tmember-link{
+  font-family:'Share Tech Mono',monospace;font-size:clamp(10px,1.6vw,12px);letter-spacing:2px;
+  color:rgba(226,238,245,0.9);text-decoration:none;
+  border-bottom:1px solid rgba(121,235,255,0.22);padding-bottom:2px;display:inline-block
 }
-.tier:hover{border-color:rgba(121,235,255,0.4);background:rgba(121,235,255,0.07);transform:translateX(6px)}
-.tier-name{font-family:'Orbitron',sans-serif;font-size:clamp(10px,1.5vw,11px);letter-spacing:2px;color:var(--c);margin-bottom:4px}
-.tier-perk{font-size:clamp(12px,1.8vw,13px);color:var(--mute)}
-.tier-price{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,4vw,30px);letter-spacing:2px;line-height:1;flex-shrink:0}
-.tier-price sub{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--mute);font-style:normal}
-.support-right p{font-size:clamp(14px,2vw,16px);line-height:1.9;color:var(--mute);margin-bottom:clamp(14px,2.5vw,22px)}
-.support-right strong{color:var(--c)}
-.support-note{
-  font-family:'Share Tech Mono',monospace;font-size:clamp(9px,1.5vw,11px);letter-spacing:1px;
-  padding:clamp(10px,2vw,14px) clamp(14px,2.5vw,18px);
-  border-left:2px solid var(--gold);
-  background:rgba(200,169,110,0.04);
-  color:rgba(200,169,110,0.7);
-  line-height:1.8;margin-bottom:clamp(20px,3.5vw,32px);
-}
+.tmember-link:hover{color:var(--c);border-bottom-color:rgba(121,235,255,0.5)}
 
 /* ═══════════════════════════════════════════
    PRESS
@@ -646,6 +625,12 @@ footer{
   display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;
 }
 .footer-copy{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--mute);letter-spacing:1px}
+.footer-right{display:flex;align-items:flex-start;gap:clamp(14px,3vw,28px);flex-wrap:wrap;justify-content:flex-end}
+.footer-contact{display:flex;flex-direction:column;gap:6px;min-width:min(240px,100%)}
+.footer-label{font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:2px;color:rgba(226,238,245,0.85)}
+.footer-mails{display:flex;flex-direction:column;gap:6px}
+.footer-mails a{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--mute);text-decoration:none;letter-spacing:1px;transition:color .2s}
+.footer-mails a:hover{color:var(--c)}
 .footer-links{display:flex;gap:clamp(12px,3vw,24px)}
 .footer-links a{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--mute);text-decoration:none;letter-spacing:1px;transition:color .2s}
 .footer-links a:hover{color:var(--c)}
@@ -664,9 +649,9 @@ footer{
   <div class="pre-inner">
     <div class="pre-logo-wrap">
       <div class="pre-ring"></div>
-      <img src="logo_kinetic_sparks.jpg" alt="KS">
+      <img src="logo kinetic sparks.png" alt="Kinetic Sparks Games">
     </div>
-    <div class="pre-title">KUROMAKU</div>
+    <div class="pre-title">DATA TRADER</div>
     <div class="pre-sub">CAIRO · 30.0444°N 31.2357°E · 2127</div>
     <div class="pre-bar-wrap"><div id="pf" class="pre-fill"></div></div>
     <div class="pre-msg" id="pm">INITIALIZING CAIRO NET...</div>
@@ -682,32 +667,34 @@ footer{
 <!-- NAV -->
 <nav id="nav">
   <a href="#hero" class="nav-logo">
-    <img src="logo_kinetic_sparks.jpg" alt="KS">
+    <img src="logo kinetic sparks.png" alt="Kinetic Sparks Games">
     <span class="nav-logo-text">KINETIC SPARKS</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#lore">LORE</a></li>
-    <li><a href="#mechanics">GAMEPLAY</a></li>
     <li><a href="#trailer">TRAILER</a></li>
-    <li><a href="#media-sec">MEDIA</a></li>
+    <li><a href="#media-sec">SCREENSHOTS</a></li>
+    <li><a href="#mechanics">GAMEPLAY</a></li>
+    <li><a href="#lore">LORE</a></li>
     <li><a href="#arg">ARG</a></li>
     <li><a href="#team">TEAM</a></li>
-    <li><a href="#support">SUPPORT</a></li>
+    <li><a href="#studio">THE STUDIO</a></li>
+    <li><a href="#press">MEDIA KIT</a></li>
   </ul>
-  <a href="#" class="nav-cta">♦ WISHLIST ON STEAM</a>
+  <a href="https://store.steampowered.com/app/4496260/Data_Trader/" target="_blank" rel="noopener noreferrer" class="nav-cta">♦ WISHLIST ON STEAM</a>
   <button class="ham-btn" id="ham"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- MOBILE NAV -->
 <div class="mob-nav" id="mobnav">
   <button class="close-btn" id="mobclose">[ CLOSE ]</button>
-  <a href="#lore" onclick="closeMob()">LORE</a>
-  <a href="#mechanics" onclick="closeMob()">GAMEPLAY</a>
   <a href="#trailer" onclick="closeMob()">TRAILER</a>
-  <a href="#media-sec" onclick="closeMob()">MEDIA</a>
+  <a href="#media-sec" onclick="closeMob()">SCREENSHOTS</a>
+  <a href="#mechanics" onclick="closeMob()">GAMEPLAY</a>
+  <a href="#lore" onclick="closeMob()">LORE</a>
   <a href="#arg" onclick="closeMob()">ARG</a>
   <a href="#team" onclick="closeMob()">TEAM</a>
-  <a href="#support" onclick="closeMob()">SUPPORT</a>
+  <a href="#studio" onclick="closeMob()">THE STUDIO</a>
+  <a href="#press" onclick="closeMob()">MEDIA KIT</a>
 </div>
 
 <!-- HERO -->
@@ -717,14 +704,14 @@ footer{
   <div class="cb bl"></div><div class="cb br"></div>
 
   <span class="hero-eyebrow">KINETIC SPARKS GAMES &nbsp;·&nbsp; IN DEVELOPMENT</span>
-  <img class="hero-logo" src="logo_kuromaku.jpg" alt="Kuromaku">
-  <h1 class="hero-title"><span class="hero-title-text">KUROMAKU</span></h1>
+  <img class="hero-logo" src="logo kinetic sparks.svg" alt="Kinetic Sparks Games">
+  <h1 class="hero-title"><span class="hero-title-text">DATA TRADER</span></h1>
   <div class="hero-location">CAIRO &nbsp;·&nbsp; 2127</div>
   <div class="hero-rule"></div>
   <p class="hero-desc">You wake up without a face and without a past in the fractured streets of cyberpunk Cairo. The only way to remember who you are is to dig through the city's corrupted data — one archive at a time.</p>
   <div class="hero-btns">
-    <a href="#" class="btn-primary">♦ ADD TO WISHLIST</a>
-    <a href="#lore" class="btn-ghost">EXPLORE THE CITY ↓</a>
+    <a href="https://store.steampowered.com/app/4496260/Data_Trader/" target="_blank" rel="noopener noreferrer" class="btn-primary">♦ ADD TO WISHLIST</a>
+    <a href="https://www.patreon.com/cw/kineticsparksgames" target="_blank" rel="noopener noreferrer" class="btn-ghost">SUPPORT ON PATREON ↓</a>
   </div>
 
   <div class="scroll-ind"><span>SCROLL</span><div class="scroll-pill"></div></div>
@@ -759,6 +746,76 @@ footer{
       <span class="ticker-item">THREAT LEVEL: CLASSIFIED</span>
       <span class="ticker-item">FACTION: HACKERS</span>
       <span class="ticker-item">IDENTITY: CORRUPTED</span>
+    </div>
+  </div>
+</section>
+
+<div class="hdiv"></div>
+
+<!-- TRAILER -->
+<section id="trailer">
+  <div class="container">
+    <div class="rv">
+      <span class="section-eyebrow">// TRANSMISSION_INCOMING</span>
+      <h2 class="section-title">TRAILER <span class="gold">COMING SOON</span></h2>
+      <div class="section-bar"></div>
+    </div>
+    <div class="trailer-frame rv d1">
+      <div class="t-bg"></div>
+      <div class="t-scanlines"></div>
+      <div class="t-sweep"></div>
+      <div class="t-corners">
+        <div class="tc tl"></div><div class="tc tr"></div>
+        <div class="tc bl"></div><div class="tc br"></div>
+      </div>
+      <div class="tplay-center">
+        <div class="tplay-ring"><div class="tplay-tri"></div></div>
+        <div class="tplay-label">WATCH TRAILER</div>
+        <div class="tplay-sub">// FOOTAGE IN PRODUCTION — CAIRO 2127</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hdiv"></div>
+
+<!-- MEDIA -->
+<section id="media-sec">
+  <div class="container">
+    <div class="rv">
+      <span class="section-eyebrow">// VISUAL_FEED.stream</span>
+      <h2 class="section-title">SYSTEM <em>INTERFACE</em></h2>
+      <div class="section-bar"></div>
+    </div>
+    <div class="gallery-main rv d1">
+      <img id="gImg" src="Screenshot 1.png" alt="Data Trader screenshot 1">
+      <div class="gallery-main-overlay"><span class="gallery-label" id="gLbl">&gt; screenshot.view — DATA_TRADER_UI_01</span></div>
+    </div>
+    <div class="gallery-thumbs rv d2">
+      <div class="gthumb active" onclick="setGallery(this,'Screenshot 1.png','screenshot.view — DATA_TRADER_UI_01')"><img src="Screenshot 1.png" alt="Data Trader screenshot 1"></div>
+      <div class="gthumb" onclick="setGallery(this,'Screenshot 2.png','screenshot.view — DATA_TRADER_UI_02')"><img src="Screenshot 2.png" alt="Data Trader screenshot 2"></div>
+      <div class="gthumb" onclick="setGallery(this,'Screenshot 3.png','screenshot.view — DATA_TRADER_UI_03')"><img src="Screenshot 3.png" alt="Data Trader screenshot 3"></div>
+      <div class="gthumb" onclick="setGallery(this,'Screenshot 4.png','screenshot.view — DATA_TRADER_UI_04')"><img src="Screenshot 4.png" alt="Data Trader screenshot 4"></div>
+      <div class="gthumb" onclick="setGallery(this,'Screenshot 5.png','screenshot.view — DATA_TRADER_UI_05')"><img src="Screenshot 5.png" alt="Data Trader screenshot 5"></div>
+    </div>
+  </div>
+</section>
+
+<div class="hdiv"></div>
+
+<!-- MECHANICS -->
+<section id="mechanics">
+  <div class="container">
+    <div class="rv">
+      <span class="section-eyebrow">// CORE_LOOP.protocol</span>
+      <h2 class="section-title">HOW TO <em>SURVIVE</em></h2>
+      <div class="section-bar"></div>
+    </div>
+    <div class="mech-grid">
+      <div class="mcard rv d1"><span class="mcard-num">01</span><span class="mcard-icon">📦</span><div class="mcard-title">ACQUIRE</div><p class="mcard-desc">Buy archives on Cairo's black market, run faction quests, intercept live data leaks, or send agents on covert operations. Every source carries different risk.</p></div>
+      <div class="mcard rv d2"><span class="mcard-num">02</span><span class="mcard-icon">🔍</span><div class="mcard-title">ANALYZE</div><p class="mcard-desc">Open files — text, audio, video, images. Decode encrypted data, merge fragments, identify memory shards. Viruses lurk in the shadows of every archive.</p></div>
+      <div class="mcard rv d3"><span class="mcard-num">03</span><span class="mcard-icon">⚡</span><div class="mcard-title">TRADE</div><p class="mcard-desc">Sell to Corporations, Rebels, or Hackers across Cairo's 19 districts. Trust multiplies profit. Betrayal costs reputation. Every deal reshapes the power balance.</p></div>
+      <div class="mcard rv d4"><span class="mcard-num">04</span><span class="mcard-icon">🤖</span><div class="mcard-title">DEPLOY</div><p class="mcard-desc">Build a team of agents — Chrome, Intellect, Strength, Agility. Send them on raids and infiltrations. Manage cyberpsychosis. Always expect betrayal.</p></div>
     </div>
   </div>
 </section>
@@ -806,76 +863,6 @@ footer{
   </div>
 </section>
 
-<div class="hdiv"></div>
-
-<!-- MECHANICS -->
-<section id="mechanics">
-  <div class="container">
-    <div class="rv">
-      <span class="section-eyebrow">// CORE_LOOP.protocol</span>
-      <h2 class="section-title">HOW TO <em>SURVIVE</em></h2>
-      <div class="section-bar"></div>
-    </div>
-    <div class="mech-grid">
-      <div class="mcard rv d1"><span class="mcard-num">01</span><span class="mcard-icon">📦</span><div class="mcard-title">ACQUIRE</div><p class="mcard-desc">Buy archives on Cairo's black market, run faction quests, intercept live data leaks, or send agents on covert operations. Every source carries different risk.</p></div>
-      <div class="mcard rv d2"><span class="mcard-num">02</span><span class="mcard-icon">🔍</span><div class="mcard-title">ANALYZE</div><p class="mcard-desc">Open files — text, audio, video, images. Decode encrypted data, merge fragments, identify memory shards. Viruses lurk in the shadows of every archive.</p></div>
-      <div class="mcard rv d3"><span class="mcard-num">03</span><span class="mcard-icon">⚡</span><div class="mcard-title">TRADE</div><p class="mcard-desc">Sell to Corporations, Rebels, or Hackers across Cairo's 19 districts. Trust multiplies profit. Betrayal costs reputation. Every deal reshapes the power balance.</p></div>
-      <div class="mcard rv d4"><span class="mcard-num">04</span><span class="mcard-icon">🤖</span><div class="mcard-title">DEPLOY</div><p class="mcard-desc">Build a team of agents — Chrome, Intellect, Strength, Agility. Send them on raids and infiltrations. Manage cyberpsychosis. Always expect betrayal.</p></div>
-    </div>
-  </div>
-</section>
-
-<div class="hdiv"></div>
-
-<!-- TRAILER -->
-<section id="trailer">
-  <div class="container">
-    <div class="rv">
-      <span class="section-eyebrow">// TRANSMISSION_INCOMING</span>
-      <h2 class="section-title">TRAILER <span class="gold">COMING SOON</span></h2>
-      <div class="section-bar"></div>
-    </div>
-    <div class="trailer-frame rv d1">
-      <div class="t-bg"></div>
-      <div class="t-scanlines"></div>
-      <div class="t-sweep"></div>
-      <div class="t-corners">
-        <div class="tc tl"></div><div class="tc tr"></div>
-        <div class="tc bl"></div><div class="tc br"></div>
-      </div>
-      <div class="tplay-center">
-        <div class="tplay-ring"><div class="tplay-tri"></div></div>
-        <div class="tplay-label">WATCH TRAILER</div>
-        <div class="tplay-sub">// FOOTAGE IN PRODUCTION — CAIRO 2127</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="hdiv"></div>
-
-<!-- MEDIA -->
-<section id="media-sec">
-  <div class="container">
-    <div class="rv">
-      <span class="section-eyebrow">// VISUAL_FEED.stream</span>
-      <h2 class="section-title">SYSTEM <em>INTERFACE</em></h2>
-      <div class="section-bar"></div>
-    </div>
-    <div class="gallery-main rv d1">
-      <img id="gImg" src="archive.png" alt="">
-      <div class="gallery-main-overlay"><span class="gallery-label" id="gLbl">&gt; archive.view — SECRET_ARCHIVE opened</span></div>
-    </div>
-    <div class="gallery-thumbs rv d2">
-      <div class="gthumb active" onclick="setGallery(this,'archive.png','archive.view — SECRET_ARCHIVE opened')"><img src="archive.png" alt=""></div>
-      <div class="gthumb" onclick="setGallery(this,'market__4_.png','map.view — FACTION CONTROL overlay active')"><img src="market__4_.png" alt=""></div>
-      <div class="gthumb" onclick="setGallery(this,'Loading__1_.png','system.boot — KINETIC_SPARKS init')"><img src="Loading__1_.png" alt=""></div>
-    </div>
-  </div>
-</section>
-
-<div class="hdiv"></div>
-
 <!-- ARG -->
 <section id="arg">
   <div class="arg-center">
@@ -888,8 +875,8 @@ footer{
       <div class="arg-sweep"></div>
       <span class="arg-eye">👁</span>
       <div class="arg-title">SIGNAL INTERCEPT ACTIVE</div>
-      <p class="arg-text">Kuromaku isn't just a game. Scattered across the internet are fragments —<br>corrupted files, anonymous transmissions, encrypted forum posts.<br><br>Players who look closely enough will piece together Bruce's true identity in the streets of <strong style="color:var(--c)">cyberpunk Cairo — before the game even launches.</strong></p>
-      <a href="#" class="btn-ghost">JOIN THE INVESTIGATION →</a>
+      <p class="arg-text">Data Trader isn't just a game. Scattered across the internet are fragments —<br>corrupted files, anonymous transmissions, encrypted forum posts.</p>
+      <a href="https://discord.gg/9ev5HFCBmx" target="_blank" rel="noopener noreferrer" class="btn-ghost">JOIN THE INVESTIGATION →</a>
       <div class="arg-code" id="argcode"></div>
     </div>
   </div>
@@ -902,7 +889,7 @@ footer{
   <div class="container">
     <div class="rv">
       <span class="section-eyebrow">// TEAM_MANIFEST.json</span>
-      <h2 class="section-title">THE <em>CREW</em></h2>
+      <h2 class="section-title">TEAM <em>MEMBERS</em></h2>
       <div class="section-bar"></div>
     </div>
     <div class="team-members">
@@ -912,35 +899,25 @@ footer{
         <div class="tmember-icon">🧠</div>
         <div class="tmember-role">GAME DESIGNER & PROJECT LEAD</div>
         <div class="tmember-name">SMAIYL KUBASHOV</div>
-        <p class="tmember-desc">The architect behind Kuromaku. Initiates the vision, shapes the game design, and drives the project from GDD to Steam. Every system in Cairo starts with him.</p>
+        <p class="tmember-desc"><a class="tmember-link" href="https://www.linkedin.com/in/smaiyl-kubashov/" target="_blank" rel="noopener noreferrer">PROFILE →</a></p>
       </div>
       <div class="tmember rv d2">
         <div class="tmember-icon">⚙️</div>
-        <div class="tmember-role">PROGRAMMER</div>
-        <div class="tmember-name">ENGINEER</div>
-        <p class="tmember-desc">Builds the systems that keep Cairo running — archive mechanics, faction logic, agent operations, market simulations. The city's code is his domain.</p>
+        <div class="tmember-role">CODER</div>
+        <div class="tmember-name">ASSEL YELSHIBEK</div>
+        <p class="tmember-desc"><a class="tmember-link" href="https://www.linkedin.com/in/assel-yelshibek-8a802b284/?locale=ru" target="_blank" rel="noopener noreferrer">PROFILE →</a></p>
       </div>
       <div class="tmember rv d3">
+        <div class="tmember-icon">✍️</div>
+        <div class="tmember-role">NARRATIVE DESIGNER</div>
+        <div class="tmember-name">TBA</div>
+        <p class="tmember-desc"><a class="tmember-link" href="https://discord.gg/9ev5HFCBmx" target="_blank" rel="noopener noreferrer">CONTACT →</a></p>
+      </div>
+      <div class="tmember rv d4">
         <div class="tmember-icon">🎨</div>
         <div class="tmember-role">2D ARTIST</div>
-        <div class="tmember-name">VISUAL ARTIST</div>
-        <p class="tmember-desc">Crafts the visual identity of Cairo 2127 — UI, concept art, character design. The neon-drenched face of Kuromaku is painted by their hand.</p>
-      </div>
-    </div>
-    <div class="studio-strip rv d2">
-      <div class="studio-logo-box"><img src="logo_kinetic_sparks.jpg" alt="KS"></div>
-      <div class="studio-info">
-        <div class="studio-name">KINETIC SPARKS GAMES</div>
-        <div class="studio-sub">// INDEPENDENT GAME STUDIO</div>
-        <p class="studio-p">A small, ambitious indie studio building worlds where your choices shape not just the story — but the very data that flows through it. Kuromaku is our debut.</p>
-        <div class="socials">
-          <a href="#" class="sbtn">TWITTER/X</a>
-          <a href="#" class="sbtn">YOUTUBE</a>
-          <a href="#" class="sbtn">BILIBILI</a>
-          <a href="#" class="sbtn">DISCORD</a>
-          <a href="#" class="sbtn">INSTAGRAM</a>
-          <a href="#" class="sbtn">TIKTOK</a>
-        </div>
+        <div class="tmember-name">TBA</div>
+        <p class="tmember-desc"><a class="tmember-link" href="https://discord.gg/9ev5HFCBmx" target="_blank" rel="noopener noreferrer">CONTACT →</a></p>
       </div>
     </div>
   </div>
@@ -948,24 +925,27 @@ footer{
 
 <div class="hdiv"></div>
 
-<!-- SUPPORT -->
-<section id="support">
+<!-- STUDIO -->
+<section id="studio">
   <div class="container">
     <div class="rv">
-      <span class="section-eyebrow">// SUPPORT_PROTOCOL</span>
-      <h2 class="section-title">FUND THE <span class="gold">SIGNAL</span></h2>
+      <span class="section-eyebrow">// STUDIO_PROFILE.sys</span>
+      <h2 class="section-title">THE <em>STUDIO</em></h2>
       <div class="section-bar"></div>
     </div>
-    <div class="support-grid">
-      <div class="tiers rv d1">
-        <div class="tier"><div><div class="tier-name">GHOST TIER</div><div class="tier-perk">Discord access + devlog</div></div><div class="tier-price">$3<sub>/mo</sub></div></div>
-        <div class="tier"><div><div class="tier-name">AGENT TIER</div><div class="tier-perk">Beta access + name in credits</div></div><div class="tier-price">$8<sub>/mo</sub></div></div>
-        <div class="tier"><div><div class="tier-name">KUROMAKU TIER</div><div class="tier-perk">Design input + exclusive ARG content</div></div><div class="tier-price">$20<sub>/mo</sub></div></div>
-      </div>
-      <div class="support-right rv d3">
-        <div class="support-note">Every patron gets behind-the-scenes devlog access. Watch Cairo being built — district by district.</div>
-        <p>Kuromaku is built by a <strong>small indie team</strong>. Your support directly funds art, sound design, and content expansion. Without patrons, Cairo stays dark.</p>
-        <a href="#" class="btn-gold">♦ SUPPORT ON PATREON</a>
+    <div class="studio-strip rv d2">
+      <div class="studio-logo-box"><img src="logo kinetic sparks.png" alt="Kinetic Sparks Games"></div>
+      <div class="studio-info">
+        <div class="studio-name">KINETIC SPARKS GAMES</div>
+        <div class="studio-sub">// INDEPENDENT GAME STUDIO</div>
+        <p class="studio-p">A small, ambitious indie studio building worlds where your choices shape not just the story — but the very data that flows through it. Data Trader is our debut.</p>
+        <div class="socials">
+          <a href="https://x.com/kineticsparks" target="_blank" rel="noopener noreferrer" class="sbtn">TWITTER/X</a>
+          <a href="https://discord.gg/9ev5HFCBmx" target="_blank" rel="noopener noreferrer" class="sbtn">DISCORD</a>
+          <a href="https://www.instagram.com/kineticsparks.games/" target="_blank" rel="noopener noreferrer" class="sbtn">INSTAGRAM</a>
+          <a href="https://www.tiktok.com/@kineticsparks?lang=ru-RU" target="_blank" rel="noopener noreferrer" class="sbtn">TIKTOK</a>
+          <a href="https://www.patreon.com/cw/kineticsparksgames" target="_blank" rel="noopener noreferrer" class="sbtn">PATREON</a>
+        </div>
       </div>
     </div>
   </div>
@@ -982,13 +962,23 @@ footer{
       <div class="section-bar" style="margin:0 auto 32px"></div>
     </div>
     <p class="rv d1">Press, streamers, and journalists — logos, screenshots, fact sheets, and contact info in one download. For review copies and interviews, reach out directly.</p>
-    <a href="#" class="btn-ghost rv d2">↓ DOWNLOAD PRESS KIT</a>
+    <a href="https://drive.google.com/drive/folders/1e8fHhTnvxzxVxi3WJv_NvXnc6oYWKgjN?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-ghost rv d2">↓ DOWNLOAD PRESS KIT</a>
   </div>
 </section>
 
 <footer>
-  <span class="footer-copy">© 2025 KINETIC SPARKS GAMES — KUROMAKU — CAIRO 2127 — ALL RIGHTS RESERVED</span>
-  <div class="footer-links"><a href="#">PRIVACY</a><a href="#">PRESS</a><a href="#">CONTACT</a></div>
+  <span class="footer-copy">© 2025 KINETIC SPARKS GAMES — DATA TRADER — CAIRO 2127 — ALL RIGHTS RESERVED</span>
+  <div class="footer-right">
+    <div class="footer-contact">
+      <div class="footer-label">CONTACT</div>
+      <div class="footer-mails">
+        <a href="mailto:press@kineticsparks.games">press@kineticsparks.games</a>
+        <a href="mailto:business@kineticsparks.games">business@kineticsparks.games</a>
+        <a href="mailto:support@kineticsparks.games">support@kineticsparks.games</a>
+      </div>
+    </div>
+    <div class="footer-links"><a href="#press">PRESS</a><a href="#studio">STUDIO</a></div>
+  </div>
 </footer>
 
 <script>
@@ -997,7 +987,7 @@ footer{
    PRELOADER
 ════════════════════════════════════ */
 const pfEl=document.getElementById('pf'),pmEl=document.getElementById('pm');
-const preMessages=['INITIALIZING CAIRO NET...','DECRYPTING DISTRICT 04...','LOADING ARCHIVES...','KUROMAKU READY'];
+const preMessages=['INITIALIZING CAIRO NET...','DECRYPTING DISTRICT 04...','LOADING ARCHIVES...','DATA TRADER READY'];
 let pv=0,pmi=0;
 const pit=setInterval(()=>{
   pv+=Math.random()*2.5+1.2;
@@ -1182,7 +1172,7 @@ function setGallery(th,src,lbl){
    ARG TYPEWRITER
 ════════════════════════════════════ */
 const argLines=[
-  '// SIGNAL_INTERCEPT: 5A 4B 52 4F 4D 41 4B 55',
+  '// SIGNAL_INTERCEPT: 44 41 54 41 5F 54 52 41 44 45 52',
   '// COORDINATES: 30.0444°N 31.2357°E — CLASSIFIED',
   '// NEXT_BROADCAST: [REDACTED]',
   '// SUBJECT HE_REMEMBERS: NULL — SEARCHING...',
